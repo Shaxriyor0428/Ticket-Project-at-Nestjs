@@ -32,8 +32,8 @@ export class UsersService {
     }
     // console.log(role);
 
-    // await newUser.$set("roles", [role.id]); // Bu yerda UserRoles ga o'tib o'sha yerdagi roleId ga va userId ga yangi id qo'shib qo'yadi
-    // await newUser.save();
+    await newUser.$set("roles", [role.id]); // Bu yerda UserRoles ga o'tib o'sha yerdagi roleId ga va userId ga yangi id qo'shib qo'yadi
+    await newUser.save();
     newUser.roles = [role];
     return newUser;
   }

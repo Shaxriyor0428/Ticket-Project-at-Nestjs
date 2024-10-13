@@ -24,8 +24,7 @@ export class EventService {
     return this.eventModel.findAll({ include: { all: true } });
   }
 
-  // ustoz uch xil uslubda ishladim
-  // number - 1
+
   async getSeatByTicketStatusName() {
     const ticket_status = await this.ticketStatusService.findByName("paid");
 
@@ -66,7 +65,6 @@ export class EventService {
     return seats;
   }
 
-  // // number - 2
   // async getSoldSeat() {
   //   const [getSeat] = await this.sequelize.query(`
   //   SELECT s.* FROM event e
@@ -78,7 +76,6 @@ export class EventService {
   //   return getSeat;
   // }
 
-  // // number - 3
 
   // async getSoldSeatThroughBelongstoMany() {
   //   const soldSeats = await this.eventModel.findAll({
